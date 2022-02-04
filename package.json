@@ -1,0 +1,23 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "Automated Software Testing with Playwright",
+  "main": "index.js",
+  "scripts": {
+    "tests:chrome": "playwright test --config=playwright.config.ts --project=Chromium",
+    "tests:firefox": "playwright test --config=playwright.config.ts --project=Firefox",
+    "tests:webkit": "playwright test --config=playwright.config.ts --project=Webkit",
+    "tests:e2e": "playwright test --config=e2e.config.ts --project=Chromium --headed",
+    "tests:visual:chrome:update": "playwright test --config=visual.config.ts --project=Chromium --update-sapshots",
+    "tests:visual:firefox:update": "playwright test --config=visual.config.ts --project=Firefox --update-sapshots",
+    "tests:visual:webkit:update": "playwright test --config=visual.config.ts --project=Webkit --update-sapshots",
+    "tests:api": "playwright test --config=api.config.ts --project=Chromium",
+    "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java"
+  },
+  "author": "Bruno Svaiger Zavanella",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.18.1",
+    "prettier": "^2.5.1"
+  }
+}
